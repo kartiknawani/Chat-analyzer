@@ -8,3 +8,4 @@ protobuf==3.19.0
 click==8
 nltk==3.6.7
 joblib==1.2.0
+numpy==1.20.3
