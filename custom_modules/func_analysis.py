@@ -19,12 +19,11 @@ def sentiments(data):
     score = s.polarity_scores(data)
 
     if score == 0:
-        final =" "
+        st.write(" ")
     elif score["neg"] != 0:
-        final= "# Negative"
+        st.write("# Negative")
     elif score["pos"] != 0:
-        final="# Positive"
-    return final
+        st.write("# Positive")
 
 
 def authors_name(data):
