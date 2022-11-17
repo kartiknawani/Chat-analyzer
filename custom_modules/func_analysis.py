@@ -18,12 +18,12 @@ def sentiments(data):
     s = SentimentIntensityAnalyzer()
     score = s.polarity_scores(data)
 
-    if score == 0:
-        return "# Neutral"
+   if score == 0:
+        st.write(" ")
     elif score["neg"] != 0:
-        return "# Negative"
+        st.write("# Negative")
     elif score["pos"] != 0:
-        return "# Positive"
+        st.write("# Positive")
 
 
 def authors_name(data):
