@@ -14,7 +14,7 @@ pandas = "==1.0.3"
 emoji = "==0.5.4"
 protobuf= "==3.19.0"
 click= "==8"
-nltk= "==3.5"
+nltk= "==3.7"
 
 [requires]
 python_version = "3.8"
