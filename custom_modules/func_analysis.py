@@ -12,9 +12,9 @@ from wordcloud import WordCloud, STOPWORDS
 #for sentiment analysis
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+nltk.download("vader_lexicon")
 
 def sentiments(data):
-    nltk.download("vader_lexicon")
     s = SentimentIntensityAnalyzer()
     score = s.polarity_scores(data)
 
