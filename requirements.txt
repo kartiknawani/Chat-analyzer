@@ -9,4 +9,3 @@ click==8
 nltk==3.6.7
 joblib==0.15.1
 numpy==1.18.4
-tensorflow==2.0
