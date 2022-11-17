@@ -9,6 +9,22 @@ import matplotlib.pyplot as plt
 # word cloud
 from wordcloud import WordCloud, STOPWORDS
 
+#for sentiment analysis
+import nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+def sentiments(data):
+    nltk.download("vader_lexicon")
+    s = SentimentIntensityAnalyzer()
+    score = s.polarity_scores(data)
+
+    if score == 0:
+        return "# Neutral"
+    elif score["neg"] != 0:
+        return "# Negative"
+    elif score["pos"] != 0:
+        return "# Positive"
+
 
 def authors_name(data):
     """
