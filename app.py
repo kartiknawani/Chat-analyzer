@@ -171,6 +171,9 @@ if filename is not None:
                     st.write('**Number of messages as times move on**')
                     st.plotly_chart(analysis.num_messages(member_data))
                     
+                    st.write('**Sentiment analysis:**')
+                    st.write(analysis.sentiments(data))
+                    
             except:
                 e = sys.exc_info()[0]
                 st.error("It seems that something is wrong! Try Again. Error Type: {}".format(e.__name__))
