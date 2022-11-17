@@ -18,7 +18,7 @@ def sentiments(data):
     s = SentimentIntensityAnalyzer()
     score = s.polarity_scores(data)
 
-   if score == 0:
+    if score == 0:
         final =" "
     elif score["neg"] != 0:
         final= "# Negative"
