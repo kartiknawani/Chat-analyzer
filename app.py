@@ -132,6 +132,8 @@ if filename is not None:
                     
                     st.write('**Chatter:**')
                     st.plotly_chart(analysis.chatter(data))
+                    st.write('**Sentiment analysis:**')
+                    st.write(sentiments(data)
                     
                 else:
                     member_data = data[data['Author'] == member]
