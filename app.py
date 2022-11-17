@@ -181,8 +181,8 @@ if filename is not None:
 
 st.sidebar.markdown("Made by students of GTBIT: ")
 st.sidebar.text('Kartik Nawani - 03476803119')
-st.sidebar.text('Vaishnavi Prakash - 0076803119')
-st.sidebar.text('Jigyasa - 0076803119')
-st.sidebar.text('Navroop - 0076803119')
+st.sidebar.text('Vaishnavi Prakash - 05376803119')
+st.sidebar.text('Jigyasa - 00776803119')
+st.sidebar.text('Navroop - 05476803119')
 
 
