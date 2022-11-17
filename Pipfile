@@ -12,6 +12,7 @@ wordcloud = "==1.7.0"
 streamlit = "==0.61.0"
 pandas = "==1.0.3"
 emoji = "==0.5.4"
+protobuf= "==3.19.0"
 
 [requires]
 python_version = "3.8"
