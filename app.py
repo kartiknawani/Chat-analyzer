@@ -134,7 +134,7 @@ if filename is not None:
                     st.plotly_chart(analysis.chatter(data))
                     
                     st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    st.markdown(analysis.sentiments(data))
                     
                 else:
                     member_data = data[data['Author'] == member]
@@ -172,7 +172,7 @@ if filename is not None:
                     st.plotly_chart(analysis.num_messages(member_data))
                     
                     st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    st.markdown(analysis.sentiments(data))
                     
             except:
                 e = sys.exc_info()[0]
