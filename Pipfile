@@ -15,8 +15,6 @@ emoji = "==0.5.4"
 protobuf= "==3.19.0"
 click= "==8"
 nltk= "==3.5"
-numpy= "==1.18.4"
-joblib= "==0.15.1"
 
 [requires]
 python_version = "3.8"
