@@ -93,7 +93,7 @@ if filename is not None:
         names.append('All')
         member = st.sidebar.selectbox("Member Name", names, key='1')
     
-        if not st.sidebar.checkbox("Hide", True):
+        if not st.sidebar.checkbox("Hide", False):
             try:
                 if member == "All":
                     st.markdown("### Analyze {} members together:".format(member))
