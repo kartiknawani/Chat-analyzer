@@ -1,3 +1,4 @@
+import streamlit as st
 import emoji
 import collections as c
 import pandas as pd
