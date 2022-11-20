@@ -155,6 +155,9 @@ if filename is not None:
                     
                     time.sleep(0.2)
                     
+                    st.write('**Sentiment analysis:**')
+                    analysis.sentiments(data)
+                    
                     st.write('**Most active date of {} on WhatsApp:**'.format(member))
                     st.pyplot(analysis.active_date(member_data))
                     # st.pyplot()
@@ -171,8 +174,7 @@ if filename is not None:
                     st.write('**Number of messages as times move on**')
                     st.plotly_chart(analysis.num_messages(member_data))
                     
-                    st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    
                     
             except:
                 e = sys.exc_info()[0]
