@@ -16,7 +16,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def sentiments(data):
     s = SentimentIntensityAnalyzer()
-    score = s.polarity_scores(data)
+    score = s.polarity_scores(data['Message'])
 
     if score == 0:
         st.write(" ")
