@@ -111,8 +111,7 @@ if filename is not None:
                     st.text("This will show the cloud of words which you use, larger the word size most often you use.")
                     st.pyplot(analysis.word_cloud(data))
                     # st.pyplot()
-                    st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+
                     
                     time.sleep(0.2)
                     
@@ -125,6 +124,8 @@ if filename is not None:
                     st.write('**Most active time for chat:**')
                     st.pyplot(analysis.active_time(data))
                     # st.pyplot()
+                    st.write('**Sentiment analysis:**')
+                    analysis.sentiments(data)
                     
                     st.write('**Day wise distribution of messages for {}:**'.format(member))
                     st.plotly_chart(analysis.day_wise_count(data))
