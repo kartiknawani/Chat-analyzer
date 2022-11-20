@@ -15,6 +15,7 @@ emoji = "==0.5.4"
 protobuf= "==3.19.0"
 click= "==8"
 nltk= "==3.5"
+vaderSentiment= "==3.3.2"
 
 [requires]
 python_version = "3.8"

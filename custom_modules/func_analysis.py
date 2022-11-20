@@ -15,15 +15,17 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def sentiments(data):
-    s = SentimentIntensityAnalyzer()
-    score = s.polarity_scores(data['Message'])
+    df=pd.DataFrame(data, columns=["Date", "Time", "contact", "Message"])
+    df['Date']=pd.to_datetime(df['Date'])
 
-    if score == 0:
-        st.write(" ")
-    elif score["neg"] != 0:
-        st.write("# Negative")
-    elif score["pos"] != 0:
-        st.write("# Positive")
+    dat=df.dropna()
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+    sentiments=SentimentIntensityAnalyzer()
+    dat["positive"]=[sentiments.polarity_scores(i)["pos"] for i in data["Message"]]
+    dat["negative"]=[sentiments.polarity_scores(i)["neg"] for i in data["Message"]]
+    dat["neutral"]=[sentiments.polarity_scores(i)["neu"] for i in data["Message"]]
+
+    dat.head()
 
 
 def authors_name(data):
