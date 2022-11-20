@@ -15,7 +15,25 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def sentiments(data):
-    df=pd.DataFrame(data, columns=["Date", "Time", "contact", "Message"])
+    dat=[]
+    with open(data, encoding="utf-8") as fp:
+        fp.readline()
+        messageBuffer=[]
+        date, time, author= None, None, None
+        while True:
+            line=fp.readline()
+            if not line:
+                break
+            line=line.strip()
+            if date_time(line):
+                if len(messageBuffer) >0:
+                    data.append([date, time, author, ''.join(messageBuffer)])
+                messageBuffer.clear()
+                date, time, author, message=getMassage(line)
+                messageBuffer.append(message)
+            else:
+                messageBuffer.append(line)  
+    df=pd.DataFrame(dat, columns=["Date", "Time", "contact", "Message"])
     df['Date']=pd.to_datetime(df['Date'])
 
     dat=df.dropna()
