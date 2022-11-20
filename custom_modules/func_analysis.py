@@ -2,6 +2,7 @@ import streamlit as st
 import emoji
 import collections as c
 import pandas as pd
+from custom_modules import func_use_extract_data as func
 
 # for visualization
 import plotly.express as px
@@ -10,9 +11,6 @@ import matplotlib.pyplot as plt
 # word cloud
 from wordcloud import WordCloud, STOPWORDS
 
-#for sentiment analysis
-import nltk
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 def sentiments(data):
     dat=[]
@@ -29,7 +27,7 @@ def sentiments(data):
                 if len(messageBuffer) >0:
                     data.append([date, time, author, ''.join(messageBuffer)])
                 messageBuffer.clear()
-                date, time, author, message=getMassage(line)
+                date, time, author, message=func.getDataPoint(line)
                 messageBuffer.append(message)
             else:
                 messageBuffer.append(line)  
