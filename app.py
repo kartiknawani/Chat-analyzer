@@ -111,6 +111,8 @@ if filename is not None:
                     st.text("This will show the cloud of words which you use, larger the word size most often you use.")
                     st.pyplot(analysis.word_cloud(data))
                     # st.pyplot()
+                    st.write('**Sentiment analysis:**')
+                    analysis.sentiments(data)
                     
                     time.sleep(0.2)
                     
@@ -133,8 +135,7 @@ if filename is not None:
                     st.write('**Chatter:**')
                     st.plotly_chart(analysis.chatter(data))
                     
-                    st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    
                     
                 else:
                     member_data = data[data['Author'] == member]
@@ -155,9 +156,6 @@ if filename is not None:
                     
                     time.sleep(0.2)
                     
-                    st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
-                    
                     st.write('**Most active date of {} on WhatsApp:**'.format(member))
                     st.pyplot(analysis.active_date(member_data))
                     # st.pyplot()
@@ -174,7 +172,8 @@ if filename is not None:
                     st.write('**Number of messages as times move on**')
                     st.plotly_chart(analysis.num_messages(member_data))
                     
-                    
+                    st.write('**Sentiment analysis:**')
+                    analysis.sentiments(data)
                     
             except:
                 e = sys.exc_info()[0]
