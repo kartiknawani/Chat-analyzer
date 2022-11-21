@@ -37,11 +37,11 @@ def sentiments(data):
     dat=df.dropna()
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
     sentiments=SentimentIntensityAnalyzer()
-    dat["positive"]=[sentiments.polarity_scores(i)["pos"] for i in data["Message"]]
-    dat["negative"]=[sentiments.polarity_scores(i)["neg"] for i in data["Message"]]
-    dat["neutral"]=[sentiments.polarity_scores(i)["neu"] for i in data["Message"]]
+    dat["positive"]=[sentiments.polarity_scores(i)["pos"] for i in dat["Message"]]
+    dat["negative"]=[sentiments.polarity_scores(i)["neg"] for i in dat["Message"]]
+    dat["neutral"]=[sentiments.polarity_scores(i)["neu"] for i in dat["Message"]]
 
-    st.dataframe(df)
+    dat.head()
 
 
 def authors_name(data):
