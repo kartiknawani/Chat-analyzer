@@ -41,7 +41,7 @@ def sentiments(data):
     dat["negative"]=[sentiments.polarity_scores(i)["neg"] for i in dat["Message"]]
     dat["neutral"]=[sentiments.polarity_scores(i)["neu"] for i in dat["Message"]]
 
-    dat.head()
+    st.write(dat.head())
 
 
 def authors_name(data):
