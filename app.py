@@ -125,7 +125,7 @@ if filename is not None:
                     st.pyplot(analysis.active_time(data))
                     # st.pyplot()
                     st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    analysis.sentimentss(data)
                     
                     st.write('**Day wise distribution of messages for {}:**'.format(member))
                     st.plotly_chart(analysis.day_wise_count(data))
@@ -174,7 +174,7 @@ if filename is not None:
                     st.plotly_chart(analysis.num_messages(member_data))
                     
                     st.write('**Sentiment analysis:**')
-                    analysis.sentiments(data)
+                    analysis.sentimentss(data)
                     
             except:
                 e = sys.exc_info()[0]

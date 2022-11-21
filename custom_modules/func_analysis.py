@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 
 
-def sentiments(data):
+def sentimentss(data):
     dat=[]
     with open(data, encoding="utf-8") as fp:
         fp.readline()
