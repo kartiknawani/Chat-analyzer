@@ -41,7 +41,7 @@ def sentiments(data):
     dat["negative"]=[sentiments.polarity_scores(i)["neg"] for i in data["Message"]]
     dat["neutral"]=[sentiments.polarity_scores(i)["neu"] for i in data["Message"]]
 
-    st.dataframe(dat)
+    st.dataframe(df)
 
 
 def authors_name(data):
